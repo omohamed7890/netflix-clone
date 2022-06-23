@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
+// eslint-disable-next-line no-unused-vars
 import CardSlider from "../components/CardSlider";
 import { onAuthStateChanged } from "firebase/auth";
 import { firebaseAuth } from "../utils/firebase-config";
@@ -22,14 +23,15 @@ function MoviePage() {
 
   useEffect(() => {
     dispatch(getGenres());
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     if (genresLoaded) {
       dispatch(fetchMovies({ genres, type: "movie" }));
     }
-  }, [genresLoaded]);
+  }, [dispatch, genres, genresLoaded]);
 
+  // eslint-disable-next-line no-unused-vars
   const [user, setUser] = useState(undefined);
 
   onAuthStateChanged(firebaseAuth, (currentUser) => {
