@@ -43,3 +43,8 @@ body::-webkit-scrollbar {
 .a-center {
   align-items: center;
 }
+
+.overflow { 
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}

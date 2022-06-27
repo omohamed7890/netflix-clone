@@ -34,7 +34,7 @@ function Signup() {
       <BackgroundImage />
       <div className="content">
         <Header login />
-        <div className="body flex column a-center j-center">
+        <div className="body flex column a-center j-center overflow">
           <div className="text flex column">
             <h1>Unlimited movies, TV shows and more.</h1>
             <h4>Watch anywhere. Cancel anytime.</h4>
